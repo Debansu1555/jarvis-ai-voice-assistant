@@ -13,7 +13,7 @@ import os                        #importing os to handle file operations
 
 recognizer = sr.Recognizer()       #initialize the recognizer
 engine = pyttsx3.init()            #initialize the TTS engine
-newsapi = "c56a52da8ee148a8b5412904d166b6f8"   #News API key
+newsapi = "give your api key"   #News API key
 
 def speak_old(text):           #function to convert text to speech using pyttsx3
     engine.say(text)
@@ -41,7 +41,7 @@ def speak(text):               #function to convert google text to speech using 
     os.remove("temp.mp3")                    #remove the temporary file
 
 def ai_process(command):                 #function to process command using OpenAI API  
-    client = OpenAI(api_key="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",
+    client = OpenAI(api_key="give your api key",
     )
      # pip install openai
     completion = client.chat.completions.create(
@@ -116,3 +116,4 @@ if __name__ == "__main__":
 
         except Exception as e:
             print("Error; {0}".format(e))
+
